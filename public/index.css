@@ -83,6 +83,10 @@ header {
   cursor: pointer;
 }
 
+.content > h2:hover {
+  color: #fa8e5c;
+}
+
 .content > button {
   color:#fe4f00;
   background: none;

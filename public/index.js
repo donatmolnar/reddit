@@ -52,6 +52,7 @@ posts.addEventListener('click', (event) => {
 
   } else if (action === 'modify') {
     //window.location.assign(`/modify`);
+    alert(' 🛠️ Modify feature is under development 🛠️')
   }
 
 });
