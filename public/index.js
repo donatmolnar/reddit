@@ -27,7 +27,7 @@ posts.addEventListener('click', (event) => {
     upvoteButton.disabled = true;
     downvoteButton.disabled = false;
 
-    fetch(`http://localhost:3000/posts/${dataId}/upvote`, {
+    fetch(`/posts/${dataId}/upvote`, {
       method: 'PUT',
     })
     .then(res => res.json())
@@ -38,7 +38,7 @@ posts.addEventListener('click', (event) => {
     downvoteButton.disabled = true;
     upvoteButton.disabled = false;
 
-    fetch(`http://localhost:3000/posts/${dataId}/downvote`, {
+    fetch(`/posts/${dataId}/downvote`, {
       method: 'PUT',
     })
     .then(res => res.json())
@@ -47,11 +47,11 @@ posts.addEventListener('click', (event) => {
   } else if (action === 'remove') {
 
     let post = document.getElementById(`${dataId}`);
-    fetch(`http://localhost:3000/posts/${dataId}`, {method: 'DELETE'});
+    fetch(`/posts/${dataId}`, {method: 'DELETE'});
     post.remove();
 
   } else if (action === 'modify') {
-    //window.location.assign(`http://localhost:3000/modify`);
+    //window.location.assign(`/modify`);
   }
 
 });
@@ -59,7 +59,7 @@ posts.addEventListener('click', (event) => {
 
 const newButton = document.querySelector('#new')
 newButton.addEventListener('click', () => {
-  window.location.assign(`http://localhost:3000/add`);
+  window.location.assign(`/add`);
 })
 
 let createPost = (postObject) => {

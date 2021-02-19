@@ -16,14 +16,14 @@ submitForm.addEventListener('submit', (event) => {
   } else if (!isValidUrl(url)) {
     alert('Ooops, that is an invalid url...')
   } else {
-    fetch(`http://localhost:3000/posts/${id}`, {
+    fetch(`/posts/${id}`, {
       method: 'PUT',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         title: `${title}`,
         url: `${url}`,
       })
-    }).then(window.location.assign(`http://localhost:3000/`));
+    }).then(window.location.assign(`/`));
   };
 })
 

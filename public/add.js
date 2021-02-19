@@ -14,7 +14,7 @@ submitForm.addEventListener('submit', (event) => {
   } else if (!isValidUrl(url)) {
     alert('Ooops, that is an invalid url...')
   } else {
-    fetch('http://localhost:3000/newpost', {
+    fetch('/newpost', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -22,7 +22,7 @@ submitForm.addEventListener('submit', (event) => {
         url: `${url}`,
         owner: `anonym`
       })
-    }).then(window.location.assign(`http://localhost:3000/`));
+    }).then(window.location.assign(`/`));
   };
 })
 
