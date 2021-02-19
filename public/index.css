@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: rgb(29, 29, 29);
+}
+
+main {
+  font-family: 'Lato', sans-serif;
+  color: whitesmoke;
+  display: flex;
+  margin: 10px 50px;
+}
+
+header {
+  height: 150px;
+  width: 100%;
+  background-image: url("./assets/blackhole.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#posts {
+  width: 70%;
+}
+
+.post {
+  display: flex;
+  background: rgb(41, 41, 41);
+  margin: 10px;
+  border: 1px solid rgb(60, 60, 60);
+  border-radius: 5px;
+}
+
+.post:hover {
+  border: 1px solid rgb(100, 100, 100);
+}
+
+.counter {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.counter > button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.counter > .up {
+  width: 20px;
+  height: 20px;
+  background-image: url(./assets/upvote.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.counter > .up:hover, .counter > .up:disabled {
+  background-image: url(./assets/upvoted.png);
+}
+
+.counter > .down {
+  width: 20px;
+  height: 20px;
+  background-image: url(./assets/downvote.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.counter > .down:hover, .counter > .down:disabled {
+  background-image: url(./assets/downvoted.png);
+}
+
+.content > h2 {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.content > button {
+  color:#fe4f00;
+  background: none;
+  border: 1px solid #fe4f00;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 3px;
+  cursor: pointer;
+
+}
+
+.content > button:hover {
+  border: 1px solid #fa8e5c;
+  color: #fa8e5c;
+  cursor: pointer;
+}
+
+aside {
+  width: 30%;
+}
+
+#new {
+  background: #fe4f00;
+  color: whitesmoke;
+  margin: 10px;
+  padding: 10px;
+  width: 90%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#new:hover {
+  background: #fa8e5c;
+  cursor: pointer;
+}
+
+#about {
+  background: rgb(41, 41, 41);
+  border: 1px solid rgb(60, 60, 60);
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+}
+
+#strong {
+  background: rgb(50, 50, 50);
+  font-weight: bolder;
+  width: 100%;
+  padding: 10px;
+  margin: -10px;
+}
+
+#strong > a {
+  color: #fe4f00;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+#strong > a:hover {
+  color: #fa8e5c ;
+}
+
+#share {
+  display: block;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+li {
+  margin: 10px 20px;
+}

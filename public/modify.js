@@ -1,0 +1,34 @@
+'use strict';
+  
+const submitForm = document.querySelector('form');
+
+let title = document.querySelector('#title').value;
+let url = document.querySelector('#url').value;
+
+submitForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  
+  let title = document.querySelector('#title').value;
+  let url = document.querySelector('#url').value;
+
+  if (title === '' || url === '') {
+    alert('Ooops, you forgot to add title or url...')
+  } else if (!isValidUrl(url)) {
+    alert('Ooops, that is an invalid url...')
+  } else {
+    fetch(`http://localhost:3000/posts/${id}`, {
+      method: 'PUT',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        title: `${title}`,
+        url: `${url}`,
+      })
+    }).then(window.location.assign(`http://localhost:3000/`));
+  };
+})
+
+function isValidUrl(userInput) {
+  let regexQuery = "^(https?://)?(www\\.)?([-a-z0-9]{1,63}\\.)*?[a-z0-9][-a-z0-9]{0,61}[a-z0-9]\\.[a-z]{2,6}(/[-\\w@\\+\\.~#\\?&/=%]*)?$";
+  let url = new RegExp(regexQuery,"i");
+  return url.test(userInput);
+}
