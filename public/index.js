@@ -47,7 +47,7 @@ posts.addEventListener('click', (event) => {
   } else if (action === 'remove') {
 
     let post = document.getElementById(`${dataId}`);
-    fetch(`/posts/${dataId}`, {method: 'DELETE'});
+    //fetch(`/posts/${dataId}`, {method: 'DELETE'});
     post.remove();
 
   } else if (action === 'modify') {
