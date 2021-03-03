@@ -10,6 +10,7 @@ main {
   font-family: 'Lato', sans-serif;
   color: whitesmoke;
   display: flex;
+  flex-direction: row-reverse;
   margin: 10px 10%;
 }
 
@@ -93,4 +94,44 @@ button {
 
 li {
   margin: 10px 20px;
+}
+
+
+
+@media screen and (max-width: 720px) {
+
+  header {
+  height: 120px;
+  }
+  
+  main {
+    display: block;
+    margin: 0 5px;
+  }
+  
+  #about {
+    display: block;
+    width: 85%;
+    margin: 10px;
+  }
+  
+  li {
+    margin: 10px 50px;
+  }
+    
+  form {
+    width: 90%;
+  }
+  
+  textarea {
+    margin: 0;
+  }
+  
+  input {
+    margin: 20px;
+  }
+
+  #title, #url {
+    width: 85%;
+  }
 }
