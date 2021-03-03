@@ -10,6 +10,7 @@ main {
   font-family: 'Lato', sans-serif;
   color: whitesmoke;
   display: flex;
+  flex-direction: row-reverse;
   margin: 10px 50px;
 }
 
@@ -159,4 +160,59 @@ aside {
 
 li {
   margin: 10px 20px;
+}
+
+
+@media screen and (max-width: 720px) {
+
+header {
+height: 120px;
+}
+
+main {
+  display: block;
+  margin: 0 5px;
+}
+
+#posts {
+  display: block;
+  width: 100%;
+}
+
+aside {
+  display: block;
+  width: 100%;
+}
+
+li {
+  margin: 10px 50px;
+}
+
+#new {
+  width: 90%;
+  margin: 10px 20px;
+  position: absolute;
+  visibility: hidden;
+}
+
+#new:after {
+  content: "+";
+  text-shadow: 1px 1px 2px black;
+  visibility: visible;
+  font-size: x-large;
+  font-weight: bolder;
+  background: #fe4f00;
+  color: whitesmoke;
+  width: 50px;
+  height: 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  padding: 20px 10px 20px 10px;
+  box-shadow: 3px 1px 1px rgb(0, 0, 0);
+}
+
 }
