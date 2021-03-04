@@ -8,12 +8,18 @@ require('dotenv').config();
 app.use(express.json());
 app.use(express.static('public'));
 
+const host = process.env.HOST;
+const user = process.env.USER;
+const pass = process.env.PASS;
+const db = process.env.DB;
+const auth = process.env.AUTH || true;
+
 const conn = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASS,
-  database: process.env.DB,
-  insecureAuth: true, //process.env.AUTH
+  host: host,
+  user: user,
+  password: pass,
+  database: db,
+  insecureAuth: auth,
 });
 
 // connects to mysq
