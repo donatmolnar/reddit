@@ -7,7 +7,7 @@ pipeline {
             }
             steps {
                 echo 'Building Docker image'
-                sh 'docker build -t donatmolnar/redditjenkins:1.0.0 .'
+                sh 'docker build -t donatmolnar/redditjenkins:1.1.0 .'
             }
         }
         stage('Pushing image to dockerhub') {
@@ -19,10 +19,8 @@ pipeline {
             }
             steps {
                 echo 'Pushing to dockerhub'
-                sh 'sudo docker login'
-                sh '${dockerhub_USR}'
-                sh '${dockerhub_PSW}'
-                sh 'sudo docker push donatmolnar/redditjenkins:1.0.0'
+                sh 'docker login -u ${dockerhub_USR} -p ${dockerhub_PSW}'
+                sh 'docker push donatmolnar/reddit:1.1.0'
             }
         }
     }
